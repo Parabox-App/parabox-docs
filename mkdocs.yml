@@ -1,10 +1,66 @@
-site_name: My Docs
+site_name: Parabox Docs
+repo_url: https://github.com/ojhdt/parabox
+repo_name: ojhdt/parabox
+edit_uri: edit/master/docs/
+copyright: Copyright &copy; 2022 Ojhdt Apps
+nav:
+  - 欢迎: 
+    - index.md
+    - 如何工作: how-it-works.md
+  - 快速上手: quick-start.md
+  - 常见问题: faq.md
+  - 开发: 
+    - developer.md
+    - Parabox Development Kit: parabox-development-kit.md
+extra:
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  analytics: 
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  social:
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/squidfunk
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  language: zh
   features:
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
     - announce.dismiss
   plugins:
     - social
+    - git-revision-date-localized:
+        enable_creation_date: true
+
