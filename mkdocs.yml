@@ -7,6 +7,7 @@ nav:
   - 欢迎: 
     - index.md
     - 如何工作: how-it-works.md
+    - 隐私政策: privacy.md
   - 快速上手: quick-start.md
   - 常见问题: faq.md
   - 开发: 
@@ -63,6 +64,11 @@ theme:
     - social
     - git-revision-date-localized:
         enable_creation_date: true
+    - i18n:
+      default_language: zh
+      languages:
+        zh: 简体中文
+        en: English
 
   palette:
     scheme: parabox
