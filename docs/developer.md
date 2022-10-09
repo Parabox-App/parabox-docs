@@ -20,7 +20,7 @@
 
 从命令行使用下列命令克隆 [GitHub]() 代码库：
 ```bash
-$ git clone
+$ git clone https://github.com/ojhdt/parabox-extension-example.git
 ```
 或者下载 zip 文件 ：
 
