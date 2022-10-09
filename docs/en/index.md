@@ -1,5 +1,5 @@
 # Welcome
-![图标](/assets/iamges/app.png)
+![图标](/app.png)
 
 界面友好，功能完善，可拓展的即时通讯客户端。
 

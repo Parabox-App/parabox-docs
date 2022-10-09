@@ -45,8 +45,8 @@ extra:
       link: https://twitter.com/squidfunk
 theme:
   name: material
-  logo: /assets/images/app.png
-  favicon: /assets/images/favicon.png
+  logo: /app.png
+  favicon: /favicon.png
   language: zh
   features:
     - navigation.instant
