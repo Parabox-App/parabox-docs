@@ -26,10 +26,10 @@ Android Studio Chipmunk | 2021.2.1 或更高版本
 ```bash
 $ git clone https://github.com/ojhdt/parabox-extension-example.git
 ```
-或者下载 zip 文件 ：
+或者下载 zip 文件 ：[点击下载]()
 
 ### 架构概览
-以下展示``app\src\main``下的目录结构：
+以下展示``app/src/main``下的目录结构：
 ```text
 main:
 │  AndroidManifest.xml
@@ -136,7 +136,32 @@ android {
     </application>
 </manifest>
 ```
-3\. 编译，并将应用安装至测试设备。若一切正常，您的插件应能被主端发现及显示。插件信息将显示于主页的状态检测对话框和设置页面的扩展类别（若未显示，可尝试重启主端）。点击插件图标，即可跳转插件主界面。尝试启动服务，服务状态会被即时更新至插件主界面和 Parabox 主端。
+
+3\. 点击 TODO 工具窗口中的 TODO 2-1，它位于 AndroidManifest.xml 中。为你的插件配置基本信息（简介，开发者等）。同时以数字 `0，1和2` 描述插件对六种基本消息内容的支持情况。**`0`表示不支持，`1`表示仅接收，`2`表示完全支持（接收与发送）**。此处的配置将于主端`扩展`信息页面展示。（于1.0.5-beta新增）
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    ...
+
+    <application
+        ...
+        <!-- TODO 2-1: Configure basic information for your extension-->
+        <meta-data android:name="author" android:value="Parabox"/>
+        <meta-data android:name="description" android:value="Parabox Extension Example"/>
+        <meta-data android:name="plain_text_support" android:value="1"/>
+        <meta-data android:name="image_support" android:value="0"/>
+        <meta-data android:name="audio_support" android:value="0"/>
+        <meta-data android:name="file_support" android:value="0"/>
+        <meta-data android:name="at_support" android:value="0"/>
+        <meta-data android:name="quote_reply_support" android:value="0"/>
+        ...
+    </application>
+</manifest>
+```
+
+
+4\. 编译，并将应用安装至测试设备。若一切正常，您的插件应能被主端发现及显示。插件信息将显示于主页的状态检测对话框和设置页面的扩展类别（若未显示，可尝试重启主端）。点击插件图标，即可跳转插件主界面。尝试启动服务，服务状态会被即时更新至插件主界面和 Parabox 主端。
 
 点击测试区域中的``发送测试消息``，主端应接收到来自插件的消息。主端回复后，回复消息文字应在插件主界面以 ``Snackbar`` 弹出。稍后将解释该处运作机制。
 
@@ -173,7 +198,7 @@ Parabox 插件通信机制基于 [Messenger]((https://developer.android.com/refe
 |命令（COMMAND）|``sendCommand``|``sendCommandResponse``|ParaboxActivity或主端|ParaboxService|
 |通知（NOTIFICATION）|``sendNotification``|``-``|ParaboxActivity，ParaboxService或主端|-|
 
-``请求（Request）``， ``命令（COMMAND）`` 自带回送验证及超时机制。保证每一次通信都必然在超时时间内触发 ``onRequest`` 回调。返回的 ``ParaboxResult`` 携带请求成功返回的数据或请求失败返回的错误码。常用于需要确定得到回复才能继续进行的逻辑。如消息发送/接收，更新配置等。
+``请求（Request）``， ``命令（COMMAND）`` 自带回送验证及超时机制。保证每一次通信都必然在超时时间内触发 ``onResult`` 回调。返回的 ``ParaboxResult`` 携带请求成功返回的数据或请求失败返回的错误码。常用于需要确定得到回复才能继续进行的逻辑。如消息发送/接收，更新配置等。
 
 ``请求（Request）``和 ``命令（COMMAND）`` 内部实现部分使用 Kotlin 协程，如使用 [CompletableDeferred](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-completable-deferred/) 实现挂起等待。如果回调方式不适用于您的开发需求，您也可以通过简单的封装改写成挂起函数形式：
 
@@ -319,7 +344,7 @@ override fun customHandleMessage(msg: Message, metadata: ParaboxMetadata) {
 
 4\. 了解以上流程后，删除示例代码。
 
-而对于常见的通信用例，开发工具包已封装成易于调用的方法。其内部实现仍使用 ``REQUEST`` , ``COMMAND`` 和 ``NOTIFICATION``。请参考[常见用例]()。
+而对于常见的通信用例，开发工具包已封装成易于调用的方法。其内部实现仍使用 ``REQUEST`` , ``COMMAND`` 和 ``NOTIFICATION``。请参考[常见用例](/developer/#_11)。
 
 ### 常见用例
 
@@ -334,7 +359,7 @@ override fun customHandleMessage(msg: Message, metadata: ParaboxMetadata) {
 |subjectProfile|Profile 的实例。描述当前消息所属会话的信息。对于私聊会话，该值与profile一致。对于群聊，可用于描述群聊信息，包括昵称，头像等。id需保证唯一性，用于唯一识别当前会话|
 |timestamp|消息接收时间时间戳|
 |messageId|需保证唯一性，用于唯一识别该条消息。允许置空，数据库将为其自动分配id，但置空将导致消息撤回，缓存机制等失效。|
-|pluginConnection|用于描述该条消息所属会话的连接消息。 请结合参阅下表|
+|pluginConnection|用于描述该条消息所属会话的连接信息。 请结合参阅下表|
 
 |参数|描述|
 |---|---|
@@ -371,7 +396,9 @@ private fun receiveTestMessage(msg: Message, metadata: ParaboxMetadata) {
 }
 ```
 
-上述代码接收后消息如图
+上述代码接收后消息如图：
+
+![message received](./images/1.png)
 
 #### 发送消息
 
@@ -381,7 +408,7 @@ private fun receiveTestMessage(msg: Message, metadata: ParaboxMetadata) {
 |----|----|
 |contents|MessageContent的列表。详细内容请参阅[消息包]()|
 |timestamp|消息发送时间时间戳|
-|pluginConnection|用于描述该条消息所属会话的连接消息。 请结合参阅上表|
+|pluginConnection|用于描述该条消息所属会话的连接信息。 请结合参阅上表|
 |messageId|唯一识别该条消息，由系统生成。建议以 map 临时保存，用于撤回该条消息|
 
 
