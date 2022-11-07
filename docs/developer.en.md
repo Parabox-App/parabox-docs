@@ -6,13 +6,13 @@ Plug-ins are one of the core concepts of Parabox, they can provide Parabox with 
 
 ## Development environment
 
-### development tools
+### Development Tools
 
 Android Studio Chipmunk | 2021.2.1 or later
 
 - [Android Studio](https://developer.android.com/studio)
 
-### Development language
+### Development Language
 
 - [Kotlin](https://kotlinlang.org/)
 
@@ -22,11 +22,11 @@ We provide a template project. The template project contains the SDK and complet
 
 ### Download template project
 
-Use the following command to clone the [GitHub]() repository:
+Use the following command to clone the [GitHub](https://github.com/Parabox-App/parabox-extension-example) repository:
 ```bash
-$ git clone https://github.com/ojhdt/parabox-extension-example.git
-````
-Or download the zip file: [Download]()
+$ git clone https://github.com/Parabox-App/parabox-extension-example.git
+```
+Or download the zip file: [Download](https://github.com/Parabox-App/parabox-extension-example/releases)
 
 ### Architecture overview
 The following shows the directory structure under `app/src/main`:
@@ -241,7 +241,7 @@ object CustomKey {
     const val COMMAND_RECEIVE_TEST_MESSAGE = 9999
 }
 
-````
+```
 
 2\. Click on TODO 5 in the TODO window, browse the ``receiveTestMessage`` implementation, and learn how to use ``sendCommand`` to pass in command constants, carry extra data, and send commands.
 
@@ -258,7 +258,7 @@ fun receiveTestMessage() {
             ...
         })
     }
-````
+```
 
 3\. Click TODO 6 in the TODO window, browse the ``customHandleMessage`` implementation, and learn how to use ``msg.what`` to identify the command type and call the corresponding method. Additional data to carry is available from `msg.obj`. To call `sendCommandResponse` later, pass in `metadata` as a parameter.
 
@@ -271,7 +271,7 @@ override fun customHandleMessage(msg: Message, metadata: ParaboxMetadata) {
         }
     }
 }
-````
+```
 
 4\. Click on TODO 7 in the TODO window and browse the ``receiveTestMessage`` implementation to learn how to use ``sendCommandResponse`` to send back the command result. If `sendCommandResponse` is not called, the timeout mechanism of the original command will be triggered and ``ParaboxResult`` with ``ERROR_TIMEOUT`` will be returned.
 
@@ -299,7 +299,7 @@ private fun receiveTestMessage(msg: Message, metadata: ParaboxMetadata) {
         )
     }
 }
-````
+```
 
 5\. After finishing the above process, delete the sample code.
 
@@ -312,7 +312,7 @@ object CustomKey {
     // TODO 8: Added static Key constants for notifications
     const val NOTIFICATION_SHOW_TEST_MESSAGE_SNACKBAR = 9998
 }
-````
+```
 
 2\. Click on TODO 9 in the TODO window, browse the ``showTestMessageSnackbar`` implementation, and learn how to use ``sendNotification`` to pass in notification constants, carry extra data, and send notifications.
 
@@ -323,7 +323,7 @@ private fun showTestMessageSnackbar(message: String) {
         putString("message", message)
     })
 }
-````
+```
 
 3\. Click TODO 10 in the TODO window, browse the ``customHandleMessage`` implementation, and learn how to use ``msg.what`` to identify the notification type and call the corresponding method. Additional data to carry is available from `msg.obj`. Since there is no loopback, there is no need to pass in `metadata`.
 
@@ -338,11 +338,11 @@ override fun customHandleMessage(msg: Message, metadata: ParaboxMetadata) {
         }
     }
 }
-````
+```
 
 4\. After finishing the above process, delete the sample code.
 
-And for common communication use cases, the SDK has been packaged into easy-to-call methods. Its internal implementation still uses ``REQUEST`` , ``COMMAND`` and ``NOTIFICATION``. Please refer to [Common Use Cases](/en/developer/#_11).
+And for common communication use cases, the SDK has been packaged into easy-to-call methods. Its internal implementation still uses ``REQUEST`` , ``COMMAND`` and ``NOTIFICATION``. Please refer to [Common Use Cases](/en/developer/#common-use-cases).
 
 ### Common Use Cases
 
@@ -396,7 +396,7 @@ private fun receiveTestMessage(msg: Message, metadata: ParaboxMetadata) {
 
 The execution result of the above code should be shown as below:
 
-![message received](../images/1.png)
+![message received](./images/1.png)
 
 #### Send a message
 

@@ -22,11 +22,11 @@ Android Studio Chipmunk | 2021.2.1 或更高版本
 
 ### 下载模板项目
 
-从命令行使用下列命令克隆 [GitHub]() 代码库：
+从命令行使用下列命令克隆 [GitHub](https://github.com/Parabox-App/parabox-extension-example) 代码库：
 ```bash
-$ git clone https://github.com/ojhdt/parabox-extension-example.git
+$ git clone https://github.com/Parabox-App/parabox-extension-example.git
 ```
-或者下载 zip 文件 ：[点击下载]()
+或者下载 zip 文件 ：[点击下载](https://github.com/Parabox-App/parabox-extension-example/releases)
 
 ### 架构概览
 以下展示``app/src/main``下的目录结构：

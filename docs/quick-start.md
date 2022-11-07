@@ -1,10 +1,10 @@
 # 快速上手
 
-Parabox 依靠**客户端**与**插件**配合运行。你需要同时在设备上安装客户端与插件。 ~~在使用 FCM 方式连接时，你可选择仅安装客户端。~~
+Parabox 依靠**客户端**与**插件**配合运行。你需要同时在设备上安装客户端与插件。 在使用 FCM 方式连接时，你可选择仅安装客户端。
 
 ## 下载与安装
 
-前往[官网]()，[Google Play]() 或 [Github Releases](https://github.com/ojhdt/Parabox/releases) 下载最新版本的客户端。
+前往[官网](https://parabox.ojhdt.dev/)，[Google Play](https://play.google.com/store/apps/details?id=com.ojhdtapp.parabox) 或 [Github Releases](https://github.com/Parabox-App/Parabox/releases) 下载最新版本的客户端。
 
 ## 一般启动流程
 

@@ -1,5 +1,10 @@
 # 欢迎使用
-![图标](/app.png)
+![Banner](./images/banner.png)
+
+[![Release](https://img.shields.io/github/v/release/Parabox-App/Parabox)](https://github.com/Parabox-App/Parabox/releases)
+![stars](https://img.shields.io/github/stars/Parabox-App/Parabox)
+[![Telegram](https://img.shields.io/badge/Join-Telegram-red)](https://t.me/parabox_support)
+![license](https://img.shields.io/github/license/Parabox-App/Parabox)
 
 界面友好，功能完善，可拓展的即时通讯客户端。
 
@@ -7,14 +12,22 @@
 
 ### 灵活
 贴合您的使用需求，打破信息来源隔阂，随心所欲对会话及内容进行二次筛选，归类，编组。让聊天回归纯粹。
+
 ### 个性
 界面设计遵循 Google 推出的全新设计语言 —— Material You。主题根据壁纸颜色生成（仅限 Android 12），内置多种颜色主题可供选择，只为你设计。
 
 对多种屏幕尺寸进行布局适配（手机，可折叠设备，平板），支持深色模式。
+
+![Light](./images/light.png)
+
+![Dark](./images/dark.png)
+
 ### 同步
 利用系统级推送，在不同设备之间组建消息同步网络。轻松转移消息接收成本，极大节省后台开销。
+
 ### 插件化
 第三方插件提供更丰富，更稳定的消息源。用户可根据使用习惯自行组件消息来源库，不同来源的消息仍可以得到统一而高效的处理。
+
 ### 遵循最佳实践
 使用现代安卓开发方式。界面完全使用原生 Android 界面的新工具包 Jetpack Compose 构建。在持久化，导航，后台调度，架构等诸多方面采用 Jetpack 库（包括但不限于`Paging 3` ， `DataStore` , `Navigation` , `WorkManager` , `Room`）。
 
@@ -69,7 +82,7 @@ Parabox 可便利地接入您喜欢的云端存储服务。在后台闲暇及网
 ### 插件化信息源
 第三方插件提供更丰富，更稳定的消息源。用户可根据使用习惯自行组件消息来源库，不同来源的消息仍可以得到统一而高效的处理。
 
-针对插件开发，同时提供开发者工具包与配套文档，内含预定义类和工具方法。助力开发者忽略对接细节，专注功能开发。可跳转阅读开发文档。
+针对插件开发，同时提供[开发者工具包](https://github.com/Parabox-App/parabox-development-kit)与配套文档，内含预定义类和工具方法。助力开发者忽略对接细节，专注功能开发。可跳转阅读[开发文档](/developer)。
 
 ### 数据导出
 Parabox 提供数据导出功能，用户可将会话数据导出至本地存储，以便在其他设备上使用，或作备份之用。同时，用户可将会话数据导出至其他位置，如云端存储。
@@ -86,3 +99,5 @@ Parabox 的插件生态需要开源社区共同维护。我们期待您的加入
 要快速入门插件开发，请跳转阅读[开发者文档](/developer)。
 
 ## 支持本项目
+
+如果你认可 Parabox ，请前往 [Github](https://github.com/Parabox-App/Parabox) 给予 Parabox 星标，或者在 [Google Play](https://play.google.com/store/apps/details?id=com.ojhdtapp.parabox) 上为 Parabox 留下评价。这将为我们带来莫大支持！
