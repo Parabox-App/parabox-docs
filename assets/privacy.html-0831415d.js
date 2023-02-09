@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-0a2f2444","path":"/en/privacy.html","title":"Privacy Policy","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1675949772000,"contributors":[{"name":"ojhdt","email":"ojhdtmail@gmail.com","commits":3}]},"filePathRelative":"en/privacy.md"}');export{t as data};

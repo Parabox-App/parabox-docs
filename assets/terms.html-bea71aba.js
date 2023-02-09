@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-5c14a302","path":"/en/terms.html","title":"Terms & Conditions","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1675949772000,"contributors":[{"name":"ojhdt","email":"ojhdtmail@gmail.com","commits":3}]},"filePathRelative":"en/terms.md"}');export{t as data};
