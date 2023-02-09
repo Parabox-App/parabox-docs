@@ -396,7 +396,7 @@ private fun receiveTestMessage(msg: Message, metadata: ParaboxMetadata) {
 
 The execution result of the above code should be shown as below:
 
-![message received](./images/1.png)
+![message received](/images/1.png)
 
 #### Send a message
 

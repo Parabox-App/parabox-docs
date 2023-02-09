@@ -1,5 +1,5 @@
 # Welcome
-![Banner](./images/banner.png)
+![Poster](/images/poster.png)
 
 [![Release](https://img.shields.io/github/v/release/Parabox-App/Parabox)](https://github.com/Parabox-App/Parabox/releases)
 ![stars](https://img.shields.io/github/stars/Parabox-App/Parabox)
@@ -18,9 +18,9 @@ The interface design follows Google's new design language - Material You. The th
 
 Layout adaptation for multiple screen sizes (mobile phones, foldable devices, tablets) and support for dark mode.
 
-![Light](./images/light.png)
+![Light](/images/light.png)
 
-![Dark](./images/dark.png)
+![Dark](/images/dark.png)
 
 ### Synchronize
 Use Firebase Cloud Messaging to build a message synchronization network between different devices. Easily transfer the cost of message reception and greatly save background overhead.
@@ -41,7 +41,7 @@ The message types and behaviors supported by the client include:
 |Text|✓|✓|
 |Image (jpg, png, gif) |✓|✓|
 |Voice|✓|✓|
-|File|✓|✕|
+|File|✓|✓|
 |Quote Reply|✓|✓|
 |@Someone|✓|✓|
 

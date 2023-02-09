@@ -398,7 +398,7 @@ private fun receiveTestMessage(msg: Message, metadata: ParaboxMetadata) {
 
 上述代码接收后消息如图：
 
-![message received](./images/1.png)
+![message received](/images/1.png)
 
 #### 发送消息
 

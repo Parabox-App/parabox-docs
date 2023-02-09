@@ -1,5 +1,5 @@
 # 欢迎使用
-![Banner](./images/banner.png)
+![Poster](/images/poster.png)
 
 [![Release](https://img.shields.io/github/v/release/Parabox-App/Parabox)](https://github.com/Parabox-App/Parabox/releases)
 ![stars](https://img.shields.io/github/stars/Parabox-App/Parabox)
@@ -18,9 +18,9 @@
 
 对多种屏幕尺寸进行布局适配（手机，可折叠设备，平板），支持深色模式。
 
-![Light](./images/light.png)
+![Light](/images/light.png)
 
-![Dark](./images/dark.png)
+![Dark](/images/dark.png)
 
 ### 同步
 利用系统级推送，在不同设备之间组建消息同步网络。轻松转移消息接收成本，极大节省后台开销。
@@ -43,7 +43,7 @@
 |文本|✓|✓|
 |图片（jpg，png，gif）|✓|✓|
 |语音|✓|✓|
-|文件|✓|✕|
+|文件|✓|✓|
 |引用回复|✓|✓|
 |@某人|✓|✓|
 
